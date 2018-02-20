@@ -1,0 +1,52 @@
+
+{% extends 'base.html' %}
+
+    {%block head%}
+     
+    {% if item != None %}
+        <title>{{item.name}}-Selected Class</title>
+        
+    {% else %}
+        <title>Invalid Item ID- Selected Class</title>
+    {% endif %}
+    
+    {%endblock%}
+
+
+   {% block body %}
+      <div class="container">
+    <a href="{% url 'home:index' %}">&lt; Back to the list</a>
+    
+    {% if item != None %}
+        
+        <h3>{{item.category.name}}</h3>
+        <h4>{{item.name}}</h4>
+        <p>{{item.description}}</p>
+        
+        <br><br>
+        <ul class="nav navbar-nav navbar-left">
+        <p><a class="btn btn-primary btn-lg"href="{% url 'home:register'%}" role="button">Register for this class &raquo;</a></p>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+        <p><a class="btn btn-primary btn-lg"href="{% url 'home:payment'%}" role="button"> Already registered i want to Pay &raquo;</a></p>
+        </ul>
+      
+    <br><br>
+            
+        {% if item.image%} 
+            <img src='{{item.image.url}}' class= 'img-responsive'/>
+        {%endif%}
+      </div>
+    {% else %}
+            <p>Invalid Item ID.</p>
+    {% endif %}
+       
+        
+    </div>
+
+
+
+
+
+   {% endblock %}

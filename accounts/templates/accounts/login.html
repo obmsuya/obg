@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+
+
+<br><br>
+
+   {% block body %}
+       <br>
+      <ul class="nav navbar-nav navbar-right"> 
+      <div class="row">
+        
+                
+                <div class="jumbotron">
+                 
+                     <h1>Karibu</h1>
+                     <h2> Weka jina lako na neno lako la siri kisha bonyeza Ingia Ndani</h2>
+                    
+         
+                     <h2>
+         
+                         <form method="post">
+                             {% csrf_token%}
+                             {{form.as_p}}
+         
+                             <button type="submit">Ingia ndani</button>
+                         </form>
+                     </h2>
+                     <br>
+                     <br> 
+                     <!--<p><a href="{% url 'accounts:register'%}">sina neno la siri &raquo;</a></p>-->
+                     <p><a href="{% url 'accounts:reset_password'%}">Nimesahau neno la siri &raquo;</a></p>
+                 </div>
+     
+         
+            
+    
+      </ul>
+   {% endblock %}

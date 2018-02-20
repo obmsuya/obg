@@ -1,0 +1,85 @@
+
+{% extends 'base.html' %}
+
+ 
+   {% block body %}
+        <div class="container">
+          
+        <div class="container-fluid">
+        <div class="container">
+          
+          <h1 class="display-3"><span>FURSA YA BIASHARA. TAJIRIKA SASA</span></h1>
+          
+          <h3>Kwanini ushindwe. watu wawili wanatosha kukufanya Tajiri.
+          Kuingia kwenye ofisi yako weka jina lako na jina lako la siri. Kama hauna ofisi bado wasiliana na ofisi kwa ajili ya kutengeneza ofisi yako.</h3>
+          
+          <ul class="nav navbar-nav navbar-left">
+          <p><a class="btn btn-primary btn-lg"href="{% url 'accounts:login'%}" role="button">Ingia ofisini &raquo;</a></p>
+          </ul>
+          
+          <!--<ul class="nav navbar-nav navbar-right">
+          <p><a class="btn btn-primary btn-lg"href="{% url 'accounts:register'%}" role="button">Sign up &raquo;</a></p>
+          </ul>-->
+          
+        </div>
+      </div>
+        
+        <br>
+                <div class="container">
+                  
+                      <div class="row">
+                          
+                        <div class="col-md-4">
+                          <h2><a href="#BASIC" role="button">Nitajiungaje? &raquo;</a></h2> 
+                        </div>
+                        
+                        <div class="col-md-4">
+                          <h2><a href="#ADVANCED" role="button">Nitafundishaje? &raquo;</a></h2> 
+                        </div>
+                        
+                        <div class="col-md-4">
+                          <h2><a href="#TAILOR" role="button">Je kama sitaki kuunga watu? &raquo;</a></h2> 
+                        </div>
+                        
+                        <div class="col-md-4">
+                          
+                          <h3><a href="#GIS" role="button">Nini faida yangu &raquo;</a></h3> 
+                        </div>
+                        
+                </div>
+        </div>
+        </div>
+        
+       <h2>Angalia video ili uelewe zaidi</h2>
+       <div class = "container">
+        <div class="panel-heading">
+        <div class="embed-responsive embed-responsive-16by9">
+      <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/f-SPJ92Egxg?rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+        </div>
+        </div>
+       </div>
+       
+<br><br>
+   
+        
+        
+<h2><a name= BASIC></a> Nitajiungaje?</h2> 
+<p></p>
+            <!--<p><a class="btn btn-secondary" name="#BASIC GIS" role="button">View details &raquo;</a></p>-->
+
+<h2><a name= ADVANCED></a> Nitafundishaje?</h2>
+<p>  </p>
+            <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+
+<h2><a name= TAILOR></a> Sitaki kuunga watu</h2>
+<p> </p>
+            <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+
+<h2><a name= GIS></a> sawa</h2>
+<P>
+</P>
+   <p><a href="#top" role="button">Sign in to register for a class </a></p>
+   
+
+
+   {% endblock %}
