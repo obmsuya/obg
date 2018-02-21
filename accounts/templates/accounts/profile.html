@@ -16,14 +16,14 @@
                   
                       <div class="row">
   
-       <h1>OFISINI YANGU</h1>
+       <h1>OFISI YANGU</h1>
        <h1>1) Taarifa Binafsi</h1>
-          <p>jina la Kiofisi:{{user}}</p>
-          <p>jina la kwanza: {{user.first_name}}</p>
-          <p>jina la mwisho: {{user.last_name}}</p>
+          <p>Jina la Kiofisi:{{user}}</p>
+          <p>Jina la kwanza: {{user.first_name}}</p>
+          <p>Jina la mwisho: {{user.last_name}}</p>
           <p>barua pepe: {{user.email}}</p>
-          <p>Nchi Ninayotoka:{{user.userprofile.country}}</p>
-          <p>Mkoa NInaotoka:{{user.userprofile.region}}</p>
+          <p>Nchi Unayotoka:{{user.userprofile.country}}</p>
+          <p>Mkoa Unaotoka:{{user.userprofile.region}}</p>
           <!--<p>Website:{{user.userprofile.website}}</p>-->
           <p>Namba yangu ya simu:{{user.userprofile.phone}}</p>
           <h3>PICHA</h3>
@@ -35,7 +35,7 @@
         <h1>2)Mtandao wangu</h1>  
         <p> Jina la Kiongozi wangu: {{user.userprofile.upliner}}</p>
         <p>Idadi ya Wafuasi wangu: {{user.userprofile.downliner}}
-        <p> Taarifa za Wafuasi wangu:{{user.userprofile.Maelezo}}
+        <p> Majina ya wafuasi wanne wa chini pamoja na namba zao:{{user.userprofile.Maelezo}}
         <h3>Mtandao wangu</h3>
         {%if user.userprofile.image%}
           <img src="{{ user.userprofile.image.url }}" width="240">
