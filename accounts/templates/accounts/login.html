@@ -1,38 +1,43 @@
 
-{% extends 'base.html' %}
+{% extends 'base3.html' %}
+
+{% load staticfiles %}
+
+{%block head%}
+     
+    
+    
+    {%endblock%}
 
 
-<br><br>
 
    {% block body %}
-       <br>
-      <ul class="nav navbar-nav navbar-right"> 
-      <div class="row">
-        
-                
-                <div class="jumbotron">
+      
+      <br><br><br>
                  
-                     <h1>UFUNGUO</h1>
-                     <h2> Weka jina lako la ofisi na neno lako la siri kisha bonyeza fungua</h2>
+                     
+                     <hr>
                     
          
-                     <h2>
-         
-                         <form method="post">
+                    
+         <div class="text-center">
+          <h1>Login</h1>
+                       <h2> <form method="post">
                              {% csrf_token%}
                              {{form.as_p}}
          
-                             <button type="submit">Fungua</button>
-                         </form>
-                     </h2>
-                     <br>
-                     <br> 
-                     <!--<p><a href="{% url 'accounts:register'%}">sina neno la siri &raquo;</a></p>-->
-                     <p><a href="{% url 'accounts:reset_password'%}">Nimesahau neno la siri &raquo;</a></p>
-                 </div>
-     
+                             <button type="submit">Login</button>
+                         </form></h2>
+                         <p><a href="{% url 'accounts:reset_password'%}">I Forgot my Password&raquo;</a></p>
+         </div>
          
+                    <div class="text-center">
+                     <!--<img src="{%static 'img/logpic.jpg'%}" class="img-responsive" alt=""'>-->
+                              <img src="{%static 'img/logpic2.jpg'%}" class="img-responsive" alt=""'>
+                     
+            </div> 
+            <hr>
             
     
-      </ul>
+  
    {% endblock %}
