@@ -9,7 +9,7 @@ from django.template import loader
 
 from home.forms import HomeForm, ClassRegistration, PostForm2, Images
 from home.models import Post,Item, Category,Post4, Downliner, Friend
-
+from django.contrib.auth.decorators import login_required
 
 #These class views is for chating
     
