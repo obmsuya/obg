@@ -7,6 +7,11 @@ from django.utils import timezone
 class Post(models.Model):
     post = models.CharField(max_length=200)
     user = models.ForeignKey(User)
+    image = models.ImageField(null=True, blank=True,
+            width_field="width_field",
+            height_field="height_field")
+    height_field = models.IntegerField(default=0)
+    width_field = models.IntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     
