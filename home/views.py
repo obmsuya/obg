@@ -108,7 +108,7 @@ def image(request):
 def payment(request):
     return render (request, "home/payment.html", {})
 
-
+@login_required 
 def hasira(request):
     return render (request, "home/hasira.html", {})
 
