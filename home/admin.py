@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post,Item, Category, Post4, Downliner
+from .models import Post,Item, Category, Post4, Downliner, Friend
 
 # Register your models here.
 
@@ -59,4 +59,5 @@ admin.site.register(Post, PostModelAdmin)
 admin.site.register(Item)
 admin.site.register(Category)
 admin.site.register(Post4)
+admin.site.register(Friend)
 admin.site.register(Downliner, DownlinerAdmin)

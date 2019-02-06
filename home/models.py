@@ -33,6 +33,27 @@ class Item(models.Model):
     
     def __str__(self):
         return self.name
+class Friend(models.Model):
+    users = models.ManyToManyField(User)
+    post = models.CharField(max_length=200, default= "")
+    current_user = models.ForeignKey(User, related_name='owner', null=True, on_delete=models.PROTECT)
+    
+    
+    
+    @classmethod
+    def make_friend(cls, current_user, new_friend):
+        friend, created = cls.objects.get_or_create(
+            current_user=current_user
+        )
+        friend.users.add(new_friend)
+    
+    
+    @classmethod
+    def lose_friend(cls, current_user, new_friend):
+        friend, created = cls.objects.get_or_create(
+            current_user=current_user
+        )
+        friend.users.remove(new_friend)
     
 
      

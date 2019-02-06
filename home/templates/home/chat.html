@@ -17,24 +17,17 @@
 				<div class="row">
 					<div class="col-md-8">
                                           
-						<div class="mb-8"><h2 class="auth-title"> List of Paid Books</h2></div>
-                                                <hr>
+						<div class="mb-8"><p class="auth-title"><span> List of Paid Books</span></p></div>
+                                         
                                                    {% for post in posts%}                  
                                                       {%if post.user in friends%}
                                                                  <hr>   
-                                                                 <div class="card right-in">
-                                                                     <div class="card-icon">
-                                                                        <h2><span>{{post.title}}</span></h2>
-                                                                        <h2>Joined Date:<span>{{post.created}}</span></h2>
-                                                                     </div>
-                                                                 </div>
-                                                                     <hr>    
-                                                                  <h3>Theory: <a href="{{post.theory}}">Start</a></h3>
-                                                                 <h3>Practicle: <a href="{{post.practicle}}">Start</a></h3>
-                                                                 <p></p>
-                                                                 <h3>Exam:<a href="{{post.exam}}">Start</a></h3>
+                                                                 
+                                                                     
+                                                                  <h3>Read <a href="{{post.post}}">Hasira</a></h3>
+                                                                 
                                                                  <br>
-                                                                 <h3>2. My Certificate</h3>
+                                                                 <h3>Cover</h3>
                                                                   {% if post.image%}
                                                                  <img src='{{post.image.url}}' class= 'img-responsive'/>
                                                                  {%endif%}

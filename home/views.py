@@ -8,7 +8,7 @@ from django.template import loader
 
 
 from home.forms import HomeForm, ClassRegistration, PostForm2, Images
-from home.models import Post,Item, Category,Post4, Downliner
+from home.models import Post,Item, Category,Post4, Downliner, Friend
 
 
 #These class views is for chating
@@ -18,28 +18,35 @@ class HomeView(TemplateView):
         
     def get(self, request):
         form =HomeForm()
-        posts = Post.objects.all().order_by('-created')
-        users = User.objects.exclude(id=request.user.id)
-      
+        posts = Post.objects.all().order_by('created')
+        users = User.objects.all()
+        #exclude(id=request.user.id)
+    
+        friend, created = Friend.objects.get_or_create(current_user=request.user)
+    
+        friends = friend.users.all()
+  
         
-        args = {'form': form, 'posts': posts, 'users': users}
+        args = {'form': form, 'posts': posts, 'users': users, 'friends':friends}
+        #'friends':friends
         return render(request, self.template_name, args)
         
     def post(self,request):
-        form =HomeForm(request.POST or None)
-        if form.is_valid(commit=False):
-            post = form.save()
+        form =HomeForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            post = form.save(commit=False)
             post.user =request.user
             post.save()
             text = form.cleaned_data['post']
+            
+            
             form = HomeForm()
             return redirect('home:chat')
             
-        args = {'form': form, 'text': text}
+        args = {'form': form, 'text':text}
         return render(request, self.template_name, args)
-        
 
-
+    
 
 
  
