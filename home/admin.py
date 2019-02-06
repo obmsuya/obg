@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import Post,Item, Category, Post4, Classes
+from .models import Post,Item, Category, Post4, Downliner
 
 # Register your models here.
 
 
-#class PostModelAdmin(admin.ModelAdmin):
-    #List_display = ("title", "timestamp")
-    #class Meta:
-        #model = Post2
+class DownlinerAdmin(admin.ModelAdmin):
+    List_display = ("title", "image")
+    class Meta:
+        model = Downliner
 
 #class UserProfileAdmin(admin.ModelAdmin):
     #list_display = ('name', 'description')
@@ -59,4 +59,4 @@ admin.site.register(Post, PostModelAdmin)
 admin.site.register(Item)
 admin.site.register(Category)
 admin.site.register(Post4)
-admin.site.register(Classes)
+admin.site.register(Downliner, DownlinerAdmin)

@@ -1,45 +1,104 @@
 
-{% extends 'base3.html' %}
+
+
+{% extends 'base2.html' %}
 
 {% load staticfiles %}
-
-{%block head%}
-     
-    
-    
-    {%endblock%}
-
-
+<br><br>
 
    {% block body %}
+     <br><br><br><br>
       
-      <br><br><br>
-                 
-                     
-                     <hr>
-                    
-         
-                    
-         <div class="text-center">
-          <h2>Login</h2>
-                       <p> <form method="post">
-                             {% csrf_token%}
-                             {{form.as_p}}
-         
-                             <button type="submit">Login</button>
-                         </form></p>
-                              <p><a href="{% url 'accounts:register'%}">Register New user</a></p>
-                              <p><a href="{% url 'accounts:reset_password'%}">I Forgot my Password&raquo;</a></p>
-                         
-         </div>
-         
-                    <div class="text-center">
-                     <!--<img src="{%static 'img/logpic.jpg'%}" class="img-responsive" alt=""'>-->
-                              <img src="{%static 'img/logpic2.jpg'%}" class="img-responsive" alt=""'>
-                     
-            </div> 
-            <hr>
-            
-    
-  
+      
+      
+      
+       <main class="page-wrapper">
+		<div class="page-header">
+		</div>
+			<div class="page-conten container mt-50">
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="mb-8">
+							<h2 class="auth-title">
+								Login here
+							</h2>
+							<div class="line-sep"></div>
+						</div>
+
+
+						<div class="intro mb-8">
+							Welcome OBG GLOBAL
+						</div>
+
+
+						<div class="row">
+							<div class="col-md-10 col-sm-12">
+								<div class="alert alert-danger">
+									<div class="form">
+                                                                        <form method="post">
+
+                                                                        {% csrf_token%}
+                                                                        {{form.as_p}}
+                                                                    
+                                                                    
+                                                            <button type="submit" class="btn btn-follow block btn-login">
+										 	Login </button>
+                                                                            </form>
+                                                                        
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+						
+							
+
+								<!--<div class="row">-->
+									<div class="col-md-10 col-sm-12">
+										<hr>
+										<p>
+											<p><a href="{% url 'accounts:register'%}">I don't have a password &raquo;</a></p>
+                                                                                    <p><a href="{% url 'accounts:reset_password'%}">I forgot my Password &raquo;</a></p>
+										</p>
+									</div>
+								<!--</div>-->
+							</form>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-6">
+						
+						  <img src="{%static 'img/logpic2.jpg'%}" class="img-responsive" alt=""'>
+						<hr>
+
+
+						<h3>
+							<a href="http://gis4life.pythonanywhere.com/" target="_blank">GIS ONLINE</a> 
+						</h3>
+
+						<p>
+							Become GIS pro within a short period of time.
+						</p>
+						<hr>
+
+
+
+						<h3>
+							Build your Empire
+						</h3>
+
+						<p class="mb-20">
+							Are you an enterpreneur. Do you want to build your Empire? Contact us. Thanks
+						</p>
+						
+					</div>
+				</div>
+			</div>
+	</main>
    {% endblock %}

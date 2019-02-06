@@ -59,7 +59,7 @@ class Post4(models.Model):
         return self.fullname
     
 
-class Classes (models.Model):
+class Downliner (models.Model):
     title = models.CharField (max_length=120)
     image = models.ImageField(null=True, blank=True,
             width_field="width_field",

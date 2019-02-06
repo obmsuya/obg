@@ -1,43 +1,54 @@
 
 
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 
    {% block body %}
-        <div class="container">
-            <div class="col-md-8">
-            <h2>Chat with others for help </h2>
-            <form method='post'>
-                            
-                {%csrf_token%}
-                
-                {{form.post}}
-                <br>
-                <button type="submit">submit</button>
-            </form>
-            
-            <h2>{{text}}</h2>
-            {% for post in posts%}
-                <hi>{{post.post}}</hi>
-                <p>{{post.user.get_full_name}} on {{post.created}}</p>   
-                
-            {%endfor%}
-            </div>
-            
-            <div class="col-md-4">
-              <h2>Other People</h2>
-              
-              {% for user in users %}
-                  <a href="{%url 'accounts:view_profile_with_pk' pk=user.pk%}">
-                    <h3>{{user.username}}</h3>
-                    </a>
-                  
-              
-          {% endfor %}
-          
-                
-            </div>
-        </div>
+        <br> <br> <br>
+ 
+ 
+  <main class="page-wrapper">
+   <p>Hi {{ user.username }}!</p>
+     <div class="line-sep"></div>
+		<div class="intro mb-8">Make payment to view your BOOK</div>
+              <hr>
+                <br><br>
+			<div class="page-conten container mt-50">                          
+				<div class="row">
+					<div class="col-md-8">
+                                          
+						<div class="mb-8"><h2 class="auth-title"> List of Paid Books</h2></div>
+                                                <hr>
+                                                   {% for post in posts%}                  
+                                                      {%if post.user in friends%}
+                                                                 <hr>   
+                                                                 <div class="card right-in">
+                                                                     <div class="card-icon">
+                                                                        <h2><span>{{post.title}}</span></h2>
+                                                                        <h2>Joined Date:<span>{{post.created}}</span></h2>
+                                                                     </div>
+                                                                 </div>
+                                                                     <hr>    
+                                                                  <h3>Theory: <a href="{{post.theory}}">Start</a></h3>
+                                                                 <h3>Practicle: <a href="{{post.practicle}}">Start</a></h3>
+                                                                 <p></p>
+                                                                 <h3>Exam:<a href="{{post.exam}}">Start</a></h3>
+                                                                 <br>
+                                                                 <h3>2. My Certificate</h3>
+                                                                  {% if post.image%}
+                                                                 <img src='{{post.image.url}}' class= 'img-responsive'/>
+                                                                 {%endif%}
+                                                                 
+                                                                 {%endif%}
+                                                                 
+                                                              {%endfor%}
+                                        </div>
+				 </div>
+			   </div>
 
+	</main>
+        
+        
+        
 
    {% endblock %}

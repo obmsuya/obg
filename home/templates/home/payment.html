@@ -1,78 +1,248 @@
-
-{% extends 'base.html' %}
-
+<!DOCTYPE html>
+<html lang="en">
     
+{% extends 'base3.html' %}
+{% load staticfiles %}
+
+{%block head%}
+     
+    
+    
+    {%endblock%}
 
 
 
-        
-{% block body %}
-        
- <ul class="nav navbar-nav navbar-left"> 
-      <div class="row">
-            <main role="main">
-                <h1>Almost there, one more thing!. <span>Make payment to join this class</span>.</h1>
-                     
-                         <h2></h2>
-                         <br>
-                          <p> <span>Basic GIS </span>= TSH 50,000 or $25 USD per each</p>
-                          <p><span>Advanced GIS</span> = TSH 100,000 or $50 USD per each</p>
+ {% block body %}
 
-            </main>
-      </div>
-      </
- </ul>
-                       
-                       
-<ul class="nav navbar-nav navbar-left"> 
-      
-      <div class="row">
-            
-            
-            <main role="main">
-                <h1>Payment options</h1>
-                 
-                   
-                <br>      
-                         
-                         
-                         <h2>1) <span>Mobile Wallet</span></h2>
-                                               
-                           <h3>Tigo Pesa +255653397942 or M Pesa +255753386304</h3>
-                           
-                           <h3> Account Name:Overblessing Msuya.</h3>
-                           <p class="redtext">Note: After making your payments send the refference number and your name through whatsapp at +255653397942, then
-                           check your email within two business days for further instructions.</p>
-                          
-                           <h2>2) <span>Bank Account</span></h2>
-                           <p> CRDB BANK A/C 0152303138800- Account Name:Overblessing Msuya.</p>
-                           
-                             <h3>3) <span>paypal</span></h3>     
-                    
-            </main>
-      </div>
- </ul>                  
-        
-          </ul>
-         
-          <form action = "https://paypal.com/cgi-bin/webscr" method= "post" target="_top"
+	<main class="main-wrapper">
+		
+		<aside class="left-sidebar">
+			<!--<div class="search-area"><form action=""><input type="text" placeholder="Type to search.. "></form></div>-->
+
+			 <div class="scroll-sidebar">
+			 	<!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="top-ul">      
+						<li><a href="" class="active">Countries</a>	
+							
+							
+							
+							
+							<ul class="submenu">
+                                                                
+								<li><a href="" id="link1">Tanzania</a></li>			
+								<li><a href="" id="link2">Kenya </a></li>
+								<li><a href="" id="link3">Uganda</a></li>
+                                                                <li><a href="" id="link4">Rwanda</a></li>
+                                                               
+							</ul>
+						</li>
+	
+						
+						
+					</ul>
+		</nav>
+				</div>
+		</aside>
+
+
+
+
+
+	<div class="main-section">
+		<div class="container">
+
+                <div>
+                                              
+                                              <h1>Payment Opti</h1>
+                                                <div class="line-sep"></div>
+                                                <hr>
+                                                <p><span>Select your country for payment options</span></h2>
+						
+						<br><br>
+                                                
+                </div>
+                        <div id="linkintro">
+                              
+                        </div>
+
+			
+	
+
+			
+                                                <div id="link1data" class="animated fadeIn">
+                                                        <p><span>Tanzania</p></span>
+                                                        <div class="line-sep"></div>
+                        <br>
+                                                        <div class="col-md-12"> 
+                                                                <div class="row">    
+                                                
+                                                
+                                                                        <div class="col-md-3"><p><span>M Pesa </p> <p>0653-39-7942</p></div>
+                                                                       
+                                                                        <div class="col-md-3"><p><span>Tigo Pesa </p> 0653-39-7942</div>
+                                                                         
+                                                                        <div class="col-md-3"><p><span> Airtel Money</p></div>
+                                                                        
+                                                
+                                                                        <div class="col-md-3"><p><span>CRDB BANK</p> A/C 0152303138800</div>  
+                        
+                        
+                                                                </div>
+                                                             
+                                                 <p><div class="menuItem"><a class="level2"href= "" target="sites"> Accounts Holder: Overblessing A Msuya.</a></p></div> 
+                                                        </div>
+                                                <br>
+                                                <p>NOTE: After payments, send the refference number for verification, through whatsapp number at +255653397942, then click    
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> My Courses</a> within two business hours  to start your course.</p>
+                                                <hr>
+                                       
+				       
+				       <br><br>
+				        </div>
+
+			
+
+
+
+                                        <div id="link2data" class="animated fadeIn">
+                                                        <h3>Kenya</h3>
+                                                                <div class="line-sep"></div>
+                                                <div class="col-md-12"> 
+                                                        <div class="row">    
+                                        
+                                        
+                                                                <div class="col-md-3"><h3>Safaricom </h3> <p>+255653-39-7942</p></div>
+                                                               
+                                                                <div class="col-md-3">
+                                                 
+                                                                     <h3>4.paypal</h3>     
+                                                    
+                                                  <form action = "https://paypal.com/cgi-bin/webscr" method= "post" target="_top"       
+                                               <input type="hidden" name="cmd" value="_s-xclick">
+                                               <input type="hidden" name="hosted_button_id" value="5XSG8PPLJ9APJ">
+                                               <input type="hidden" name="on0" value="Course">
+                                                 <select class="form-control" name="os0">
+                                                     <option value="Basic">Basic Class $150.00 USD</option>
+                                                     <option value="Advance">Advanced Class$300.00 USD</option>
+                                                 </select>
+                                                 <br>
+                                                 <input type="hidden" name="currency_code" value="USD">
+                                                 <input type='submit' >
+                                                  </form>
+                                                  <br>
+                                            
+                                              </div>  
                 
-       <input type="hidden" name="cmd" value="_s-xclick">
-       <input type="hidden" name="hosted_button_id" value="5XSG8PPLJ9APJ">
-       <input type="hidden" name="on0" value="Course">
-         <select class="form-control" name="os0">
-             <option value="Basic">Basic Class $25.00 USD</option>
-             <option value="Advance">Advanced Class$50.00 USD</option>
-         </select>
-         <br>
-         <input type="hidden" name="currency_code" value="USD">
-         <input type='submit' class= 'btn-success '>
-          </form>
-          <br>
-    </div>
-   
-</div>
+                
+                                                        </div>
+                                                     
+                                <p><div class="menuItem"><a class="level2"href= "" target="sites"> Accounts Name: Overblessing A Msuya.</a></p></div> 
+                                                </div>
+                        <br>
+                                                <p>NOTE: After payments, send the refference number for verification, through whatsapp number at +255653397942, then click
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> My Courses</a>within two business hours  to start your course.</p>
+                        
+                        <hr>
+                                        </div>
 
-      
 
-{% endblock %}  
+
+                                        <div id="link3data" class="animated fadeIn">
+                                                        <h3>
+                                                                Uganda
+                                                                <div class="line-sep"></div>
+                                                        </h3>
+                                                        <div class="col-md-12"> 
+                                                                                                <div class="row">    
+                                                                                
+                                                                                
+                                                                                                        <div class="col-md-3"><h3>Safaricom </h3> <p>+255653-39-7942</p></div>
+                                                                                                       
+                                                                                                        <div class="col-md-3">
+                                                                                         
+                                                                                                             <h3> <span>4.paypal</span></h3>     
+                                                                                          
+                                                                                          <form action = "https://paypal.com/cgi-bin/webscr" method= "post" target="_top"       
+                                                                                       <input type="hidden" name="cmd" value="_s-xclick">
+                                                                                       <input type="hidden" name="hosted_button_id" value="5XSG8PPLJ9APJ">
+                                                                                       <input type="hidden" name="on0" value="Course">
+                                                                                         <select class="form-control" name="os0">
+                                                                                             <option value="Basic">Basic Class $150.00 USD</option>
+                                                                                             <option value="Advance">Advanced Class$300.00 USD</option>
+                                                                                         </select>
+                                                                                         <br>
+                                                                                         <input type="hidden" name="currency_code" value="USD">
+                                                                                         <input type='submit' >
+                                                                                          </form>
+                                                                                          <br>
+                                                                                    
+                                                                                      </div>  
+                                                        
+                                                                                                </div>
+                                                                                             
+                                                                                <p><div class="menuItem"><a class="level2"href= "" target="sites"> Accounts Name: Overblessing A Msuya.</a></p></div> 
+                                                        </div>
+                                                        
+                                                        <br>
+                                                <p>NOTE: After payments, send the refference number for verification, through whatsapp number at +255653397942, then click
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> My Courses</a>within two business hours  to start your course.</p>
+                                                        <hr>
+                                        </div>
+
+
+
+                        
+                        
+                        
+                          
+                        
+                        <div id="link4data" class="animated fadeIn">
+					<h3>
+						Rwanda
+                                                <div class="line-sep"></div>
+					</h3>
+                                 <div class="col-md-12"> 
+                                                                                                <div class="row">    
+                                                                                
+                                                                                
+                                                                                                        <div class="col-md-3"><h3>Safaricom </h3> <p>+255653-39-7942</p></div>
+                                                                                                       
+                                                                                                        <div class="col-md-3">
+                                                                                         
+                                                                                                             <h3> <span>4.paypal</span></h3>     
+                                                                                          
+                                                                                          <form action = "https://paypal.com/cgi-bin/webscr" method= "post" target="_top"       
+                                                                                       <input type="hidden" name="cmd" value="_s-xclick">
+                                                                                       <input type="hidden" name="hosted_button_id" value="5XSG8PPLJ9APJ">
+                                                                                       <input type="hidden" name="on0" value="Course">
+                                                                                         <select class="form-control" name="os0">
+                                                                                             <option value="Basic">Basic Class $150.00 USD</option>
+                                                                                             <option value="Advance">Advanced Class$300.00 USD</option>
+                                                                                         </select>
+                                                                                         <br>
+                                                                                         <input type="hidden" name="currency_code" value="USD">
+                                                                                         <input type='submit' >
+                                                                                          </form>
+                                                                                          <br>
+                                                                                    
+                                                                                      </div>  
+                                                        
+                                                                                                </div>
+                                                                                             
+                                                                                <p><div class="menuItem"><a class="level2"href= "" target="sites"> Accounts Name: Overblessing A Msuya.</a></p></div> 
+                                                        </div>
+                                 <br>
+                                                <p>NOTE: After payments, send the refference number for verification, through whatsapp number at +255653397942, then click
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}">My Courses</a> within two business hours  to start your course.</p>
+                                                        <hr>
+                        
+                        </div>
+                </div>
+                </div>
+       
+        
+	
+
+
+  {% endblock %}   

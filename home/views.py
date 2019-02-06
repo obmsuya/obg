@@ -7,8 +7,8 @@ from django.shortcuts import render, get_object_or_404
 from django.template import loader
 
 
-from home.forms import HomeForm, ClassRegistration, PostForm2
-from home.models import Post,Item, Category,Post4, Classes
+from home.forms import HomeForm, ClassRegistration, PostForm2, Images
+from home.models import Post,Item, Category,Post4, Downliner
 
 
 #These class views is for chating
@@ -77,16 +77,33 @@ def register(request):
             create = form.save()
             create.save
             
-            return redirect('home:payment')
+            return redirect('home:image')
             
         args = {'form': form}
         return render(request, 'home/create.html', args)
         
+
+def image(request):
+        form = Images(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            create = form.save()
+            create.save
+            
+            return redirect('accounts:view_profile')
+            
+        args = {'form': form}
+        return render(request, 'home/image.html', args)
+
+
+
+
         
 def payment(request):
     return render (request, "home/payment.html", {})
 
 
+def hasira(request):
+    return render (request, "home/hasira.html", {})
 
 
 
