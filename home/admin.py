@@ -55,7 +55,7 @@ class PostModelAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Post, PostModelAdmin)
-#admin.site.register(Post2, PostModelAdmin2)
+
 admin.site.register(Item)
 admin.site.register(Category)
 admin.site.register(Post4)

@@ -4,20 +4,20 @@
 
 
    {% block body %}
-        <br> <br> <br>
+        <br>
  
  
   <main class="page-wrapper">
    <p>Hi {{ user.username }}!</p>
      <div class="line-sep"></div>
-		<div class="intro mb-8">Make payment to view your BOOK</div>
+		<div class="intro mb-8"><span>Lipia kupata kitabu chako</span></div>
               <hr>
-                <br><br>
+                
 			<div class="page-conten container mt-50">                          
 				<div class="row">
 					<div class="col-md-8">
                                           
-						<div class="mb-8"><p class="auth-title"><span> List of Paid Books</span></p></div>
+						<!--<div class="mb-8"><p class="auth-title"><span> List ya vitabu vilivyolipiwa itaonekana hapa</span></p></div>-->
                                          
                                                    {% for post in posts%}                  
                                                       {%if post.user in friends%}
