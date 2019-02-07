@@ -24,43 +24,31 @@ class ClassRegistration(forms.ModelForm):
     fullname= forms.CharField(widget=forms.TextInput(
         attrs={
             'class':'form-control',
-            'placeholder': 'First name and last name....'
+            'placeholder': 'Your first and last name....'
         }
     ))
     
     
-    subject= forms.CharField(widget=forms.TextInput(
-        attrs={
-            'class':'form-control',
-            'placeholder': 'Put subject category example Basic GIS....'
-        }
-    ))
-    
-    subtitle= forms.CharField(widget=forms.TextInput(
-        attrs={
-            'class':'form-control',
-            'placeholder': 'Put the subtitle example Introd to GIS....'
-        }
-    ))
+   
     
     username= forms.CharField(widget=forms.TextInput(
         attrs={
             'class':'form-control',
-            'placeholder': 'Put your login username....'
+            'placeholder': 'Your login name created previously....'
         }
     ))
     
-    Proffession= forms.CharField(widget=forms.TextInput(
+    region= forms.CharField(widget=forms.TextInput(
         attrs={
             'class':'form-control',
-            'placeholder': 'Example Engineering, Surveyor etc....'
+            'placeholder': 'Your region or state ....'
         }
     ))
     
 
     class Meta:
         model = Post4
-        fields = ('fullname', 'username','Proffession','subject','subtitle','phone')
+        fields = ('fullname', 'username','country', 'region','phone')
 
 class PostForm2(forms.ModelForm):
     class Meta:

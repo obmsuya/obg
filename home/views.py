@@ -84,7 +84,7 @@ def register(request):
             create = form.save()
             create.save
             
-            return redirect('home:image')
+            return redirect('accounts:login')
             
         args = {'form': form}
         return render(request, 'home/create.html', args)

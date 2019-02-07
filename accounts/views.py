@@ -22,7 +22,7 @@ def register(request):
         if form.is_valid():
             form.save()
             #return redirect('/account')
-            return redirect(reverse('accounts:login'))
+            return redirect(reverse('home:register'))
     else:
         form = RegistrationForm()
 
