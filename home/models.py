@@ -34,6 +34,7 @@ class Item(models.Model):
     name = models.CharField(max_length= 50)
     subtitle = models.CharField (max_length=120, default='Introduction to GIS')
     description = models.TextField()
+    price = models.IntegerField(default=0)
     category = models.ForeignKey(Category)
     
     def __str__(self):

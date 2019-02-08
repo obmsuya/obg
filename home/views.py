@@ -140,11 +140,6 @@ def classes_detail(request,id):
     return render(request, "home/class_detail.html", context)   
 
 
-
-
-
-
-
 #post create   
 def classes_create(request):
     form = PostForm2(request.POST or None, request.FILES or None)
@@ -193,13 +188,3 @@ def classes_delete(request,id):
 
 
 
-#def create(request):
-#        form = ClassRegistration(request.POST)
-#        if form.is_valid():
-#            create = form.save()
-#            
-#            return redirect('home:chat')
-#            
-#        args = {'form': form}
-#        return render(request, 'home/create.html', args) 
-#  

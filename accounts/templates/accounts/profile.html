@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     
-{% extends 'base3.html' %}
+{% extends 'base4.html' %}
 {% load staticfiles %}
 
 {%block head%}
@@ -14,33 +14,43 @@
 
  {% block body %}
 
-	<main class="main-wrapper">
+	
+   
+   
+   <main class="main-wrapper">
 		
-		<aside class="side-panel">
-			<!--<div class="search-area"><form action=""><input type="text" placeholder="Type to search.. "></form></div>-->
-				
-				<div class="scroll-able mt-10">
-					<ul class="top-ul">
-						<li><a href="" class="active">{{user}}</a>	
+		<aside class="left-sidebar">
+			<div class="search-area"><form action=""><input type="text" placeholder="Type to search.. "></form></div>
+
+			 <div class="scroll-sidebar">
+			 	<!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="top-ul">
+                              <li><a href="" class="active">{{user}}</a>	
+                        <li class="nav-small-cap">MENU</li>
+                        <li><a href="" class="active">Introduction</a>	
 							<ul class="submenu">
-								<li><a href="" id="link1">My network</a></li>
+                                                            
+                                                            
+                                                            <li><a href="" id="link1">My network</a></li>
 									
 								<li><a href="" id="link2">My Account</a></li>
 								<li><a href="" id="link3">Message from Office</a></li>
 								<li><a href="" id="link4">Complaint</a></li>
-								
-                                                               
 							</ul>
 							
-						</li>
+						
 	
-						
-                                               
-						
+						<li><a href="" >Toka</a></li>
 						
 						
-					</ul>
-				</div>
+                       </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+			 </div>
+				
+	
 				
 		</aside>
 		
@@ -119,7 +129,7 @@
 			<div id="link1data" class="animated fadeIn">
 
 
-			      
+				<h2>Network</h2>
 				<div class="section2 grey-scale">
 					<div class="text-center">
 					
@@ -140,11 +150,10 @@
 			    </div>
 				
 				
-				 
-<br>
-              		
+					
+				
 
-	</div>
+			</div>
 
 			
 
@@ -192,14 +201,16 @@
 					<hr>
 			</div>
 
-
+			
+			
+			
+			
 
 
 
 		</div>
 	
-</main>
-     
+</main>  
      
       {% endblock %}   
         

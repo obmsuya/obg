@@ -11,31 +11,38 @@
    <p>Hi {{ user.username }}!</p>
      <div class="line-sep"></div>
 		<div class="intro mb-8"><span>Lipia kupata kitabu chako</span></div>
-              <hr>
+              <hr><hr>
                 
 			<div class="page-conten container mt-50">                          
 				<div class="row">
 					<div class="col-md-8">
                                           
-						<!--<div class="mb-8"><p class="auth-title"><span> List ya vitabu vilivyolipiwa itaonekana hapa</span></p></div>-->
-                                         
+						
                                                    {% for post in posts%}                  
                                                       {%if post.user in friends%}
-                                                                 <hr>   
-                                                                 
+                                                                   
+                                                                 <h2>Books</<h2>
                                                                      
-                                                                  <h3>Read <a href="{{post.post}}">Hasira</a></h3>
+                                                                  <p>Read <a href="{{post.post}}">Mbinu ya kudhubiti Hasira</a></p>
                                                                  
                                                                  <br>
                                                                  <h3>Cover</h3>
-                                                                  {% if post.image%}
-                                                                 <img src='{{post.image.url}}' class= 'img-responsive'/>
-                                                                 {%endif%}
+                                                                  <img src="{%static 'img/hasira.jpg'%}" alt=""'>	
+                                                                 
+                                                                 
+                                                                 
                                                                  
                                                                  {%endif%}
                                                                  
                                                               {%endfor%}
+                                                              
+                                                              
                                         </div>
+                                       <div class="col-md-3"> 
+                                        <h3>JENGA HIMAYA</h3>
+                                      
+                                       <h3><a href="{{user.userprofile.phone}}">My Back office </a></h3>
+                                       </div>          
 				 </div>
 			   </div>
 
