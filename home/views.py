@@ -104,7 +104,7 @@ def image(request):
 
 
 
-        
+@login_required         
 def payment(request):
     return render (request, "home/payment.html", {})
 
