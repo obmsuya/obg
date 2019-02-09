@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect,reverse
 from .forms import (
     RegistrationForm,
     EditProfileForm,
+    UserProfileForm,
 )
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm, PasswordChangeForm
@@ -66,3 +67,15 @@ def change_password(request):
         form = PasswordChangeForm(user=request.user)
         args = {'form': form}
         return render(request, 'accounts/change_password.html', args)
+
+
+def activate(request):
+        form = UserProfileForm(request.POST or None)
+        if form.is_valid():
+            create = form.save()
+            create.save
+            
+            return redirect('accounts:profile')
+            
+        args = {'form': form}
+        return render(request, 'accounts/activate.html', args)

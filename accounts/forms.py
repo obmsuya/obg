@@ -1,5 +1,6 @@
 from django import forms
 from . import models
+from accounts.models import UserProfile
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import  UserCreationForm, UserChangeForm
 
@@ -28,3 +29,30 @@ class EditProfileForm(UserChangeForm):
     class Meta:
         model = User
         fields = ('first_name','last_name','email','password')
+
+
+class UserProfileForm(forms.ModelForm):
+    Proffession= forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class':'form-control',
+            'placeholder': 'Put activation code here....'
+        }
+    ))
+    
+    upliner= forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class':'form-control',
+            'placeholder': 'Put upliner name here....'
+        }
+    ))
+    
+    name = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class':'form-control',
+            'placeholder': 'Put new member name....'
+        }
+    ))
+    
+    class Meta:
+        model = UserProfile
+        fields=('user','Proffession','name','upliner', 'Maelezo', 'phone', 'image')
