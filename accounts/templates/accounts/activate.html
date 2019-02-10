@@ -42,8 +42,8 @@
 							<div class="col-md-10 col-sm-12">
 								<div class="alert alert-danger">
 									<div class="form">
-                                                                        <form method="post">
-
+                                                                        
+									<form method="POST" action ='' enctype='multipart/form-data'>
                                                                         {% csrf_token%}
                                                                         {{form.as_p}}
                                                                     

@@ -25,8 +25,7 @@ class HomeView(TemplateView):
         friend, created = Friend.objects.get_or_create(current_user=request.user)
     
         friends = friend.users.all()
-  
-        
+      
         args = {'form': form, 'posts': posts, 'users': users, 'friends':friends}
         #'friends':friends
         return render(request, self.template_name, args)
@@ -46,10 +45,6 @@ class HomeView(TemplateView):
         args = {'form': form, 'text':text}
         return render(request, self.template_name, args)
 
-    
-
-
- 
 def home(request):
     context = {
        'categories':Item.objects.all() 
@@ -75,8 +70,6 @@ def item(request, item_id):
     }
     return render(request, 'home/item.html', context)
 
-
-
 #This view is for class registration- 
 def register(request):
         form = ClassRegistration(request.POST or None)
@@ -101,9 +94,6 @@ def image(request):
         args = {'form': form}
         return render(request, 'home/image.html', args)
 
-
-
-
 @login_required         
 def payment(request):
     return render (request, "home/payment.html", {})
@@ -111,10 +101,6 @@ def payment(request):
 @login_required 
 def hasira(request):
     return render (request, "home/hasira.html", {})
-
-
-
-    
 
 #post_list      
 def classes_home(request):
@@ -139,7 +125,6 @@ def classes_detail(request,id):
             
     return render(request, "home/class_detail.html", context)   
 
-
 #post create   
 def classes_create(request):
     form = PostForm2(request.POST or None, request.FILES or None)
@@ -153,8 +138,7 @@ def classes_create(request):
     args = {'form': form}
         
     return render(request, 'home/class_create.html', args)
- 
-    
+   
 #post_update
 def classes_update(request,id):
     try:
@@ -175,7 +159,6 @@ def classes_update(request,id):
         'form': form,
     }
     return render(request, "home/class_update.html", context)
-
 
 def classes_delete(request,id):
     try:

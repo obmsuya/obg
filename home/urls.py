@@ -13,13 +13,18 @@ from home.views import HomeView
 urlpatterns = [
 
     url(r'^$', views.index),
+    
+    
     url(r'^chat', HomeView.as_view(), name = 'chat'),
     
     url(r'^home/$', views.home, name = "home"),
     url(r'^payment/$', views.payment, name = "payment"),
     url(r'^hasira/$', views.hasira, name = "hasira"),
     url(r'^index/$', views.index, name = "index"),
-    url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"), 
+    
+    url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),
+    
+    
     url(r'^register/$', views.register, name = "register"),
     url(r'^image/$', views.image, name = "image"), 
   

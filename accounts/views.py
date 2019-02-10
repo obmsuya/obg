@@ -70,12 +70,12 @@ def change_password(request):
 
 
 def activate(request):
-        form = UserProfileForm(request.POST or None)
+        form = UserProfileForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             create = form.save()
             create.save
             
-            return redirect('accounts:profile')
+            return redirect('home:chat')
             
         args = {'form': form}
         return render(request, 'accounts/activate.html', args)

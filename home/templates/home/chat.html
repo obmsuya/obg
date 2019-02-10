@@ -8,21 +8,22 @@
  
  
   <main class="page-wrapper">
-   <p>Hi {{ user.username }}!</p>
-     <div class="line-sep"></div>
-		<div class="intro mb-8"><span>Lipia kupata kitabu chako</span></div>
-              <hr><hr>
+   
                 
-			<div class="page-conten container mt-50">                          
+			<div class="page-conten container mt-50">
+                            <p>Hi {{ user.first_name }}!</p>
+     <div class="line-sep"></div>
+		<div class="intro mb-8"><span>LIPA KUPATA HUDUMA</span></div>
+              <hr><hr>
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-7">
                                           
 						
                                                    {% for post in posts%}                  
                                                       {%if post.user in friends%}
                                                                    
-                                                                 <h2>Books</<h2>
-                                                                     
+                                                                 <h2>BOOKS</<h2>
+                                                                     <div class="line-sep"></div>
                                                                   <p>Read <a href="{{post.post}}">Mbinu ya kudhubiti Hasira</a></p>
                                                                  
                                                                  <br>
@@ -38,11 +39,16 @@
                                                               
                                                               
                                         </div>
-                                       <div class="col-md-3"> 
-                                        <h3>JENGA HIMAYA</h3>
-                                      <h3><a href="{% url 'accounts:activate'%}" role="button">Activate</a></h3>
+                                       
+                                        <div class="col-md-5">
+                                    
+                                        {%if user.userprofile %}
+                                            <h3>JENGA HIMAYA</h3>
+                                             <div class="line-sep"></div>
+                                      <h3><a href="{{user.userprofile.country}}"> Activate</a> New Member</h3>
                                       
                                        <h3><a href="{{user.userprofile.Proffession}}">My Back office </a></h3>
+                                       {%endif%}
                                        </div>          
 				 </div>
 			   </div>
