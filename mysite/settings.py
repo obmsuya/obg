@@ -101,7 +101,7 @@ DATABASES = {
             'COLLATION': 'utf8mb4_unicode_ci',
         },
         'PASSWORD': 'Pa55w0rd',
-        'HOST': 'obmsuya.mysql.pythonanywhere-services.com',
+        'HOST': 'obg.mysql.pythonanywhere-services.com',
         'PORT': '',
        
     }
