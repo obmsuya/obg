@@ -74,7 +74,7 @@
                                               
                 				                              <div class="text-center">
                 				
-                					                             <h2 class="font-weight-bold">How do i look?</h2>
+                					                             <h2 class="font-weight-bold">How do i look?</h2>: 
                 						
                 					                               {%if user.userprofile.image2%}
                                                           <img src="{{ user.userprofile.image2.url }}" class="img-responsive" width="400" height="500" alt="">
@@ -193,6 +193,7 @@
                                                 <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#buysellnet">BUY AND SALE
                                               </div>            </button> </h2>
 
+                            
                             <div class="text-center">
           
       
@@ -200,7 +201,8 @@
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                                       <div class="modal-header">
-                                                          <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>
+                                                          <h5 class="modal-title" id="exampleModalLongTitle">BUY AND SALE</h5>:
+                                                           <P>{{user.userprofile.fullname}}</P> 
                                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                               <span aria-hidden="true">&times;</span>
                                                           </button>
@@ -214,14 +216,14 @@
                                                                                        <h2 class="font-weight-bold">Timu yako</h2>
                                                                                           <div class="text-center">
                                                                                          
-                                                                                                 
-                                                                                                         
-                                                                      <P>{{user.userprofile.upliner}}</P>
-                                                                       <P>{{user.userprofile.firstgenb}}</P>
-                                                                     <P>{{user.userprofile.secondgenb}}</P>
-                                                                     <P>{{user.userprofile.thirdgenb}}</P>
-                                                                     <P>{{user.userprofile.fouthgenb}}</P>
-                                                                     <P>{{user.userprofile.fifthgenb}}</P>
+                                                                      <p>Kizazi cha kwanza una watu: {{user.userprofile.firstgenb}}</p>
+                                                 
+                                                                      <p>Kizazi cha pili una watu: {{user.userprofile.secondgenb}}</p>
+                                                                                              
+                                                                       <P>Kizazi cha tatu una watu: {{user.userprofile.thirdgenb}}</P>                         
+                                                                      <P>Kizazi cha nne una watu: {{user.userprofile.fouthgenb}}</P>        
+                                                                      <P>Kizazi cha tano una watu: {{user.userprofile.fifthgenb}}</P>
+                                                                       
                                                                                           </div>
                                                                                                  
                                                                                          
@@ -258,7 +260,9 @@
                                             
                 			   
                                                 <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#regprocess">REFFERAL
-                                              </div>						</button> </h2>                            
+                                              </div>						</button> </h2>  
+
+                                                                     
                             <div class="text-center">
 					
 			
@@ -266,7 +270,8 @@
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                                       <div class="modal-header">
-                                                          <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>
+                                                          <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>:
+                                                           <P>{{user.userprofile.fullname}}</P> 
                                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                               <span aria-hidden="true">&times;</span>
                                                           </button>
@@ -331,12 +336,13 @@
                       <div class="row">
                                   
                                          <div class="col-md-5">
-                                            <h2>Buy and sell</h2>
-                                             <div class="line-sep"></div>
+                                            
+                                             
   
                          
-                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#buysellaccount">ACCOUNT
-                                              </div>            </button> </h2>                            
+                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#buysellaccount">BUY AND SALE ACCOUNT
+                                              </div>            </button> </h2>  
+                                                                     
                             <div class="text-center">
           
       
@@ -344,7 +350,8 @@
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                                       <div class="modal-header">
-                                                          <h5 class="modal-title" id="exampleModalLongTitle">ACCOUNT</h5>
+                                                          <h5 class="modal-title" id="exampleModalLongTitle">ACCOUNT</h5>:
+                                                           <P>{{user.userprofile.fullname}}</P> 
                                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                               <span aria-hidden="true">&times;</span>
                                                           </button>
@@ -355,17 +362,84 @@
                                                   
                                                        <section class="section grey-scale" >
                                                                                  <div class="container">
-                                                                                       <h2 class="font-weight-bold">Timu yako</h2>
+                                                                                      <h2 class="font-weight-bold">Mapato kwa mwezi</h2>
+                                                                                       <P>JUMLA: {{user.userprofile.totalr}}</P>
                                                                                           <div class="text-center">
                                                                                          
                                                                                                  
                                                                                                          
-                                                    <P>{{user.userprofile.firstmthb}}</P>
-                                                   <P>{{user.userprofile.secondmthb}}</P>
-                                                   <P>{{user.userprofile.thirdmthb}}</P>
-                                                   <P>{{user.userprofile.fouthmthb}}</P>
-                                                   <P>{{user.userprofile.fifthmthb}}</P>
-                                                   <P>{{user.userprofile.sixthmthb}}</P>
+                                                   
+
+                                                    <table>
+                                             <tr>
+                                               <th>MWEZI</th>
+                                               <th>KIPATO</th>
+                                             </tr>
+                                             <tr>
+                                               <td>January</td>
+                                               <td><P>{{user.userprofile.firstmthb}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>February</td>
+                                               <td><P>{{user.userprofile.secondmthb}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>March</td>
+                                               <td><P>{{user.userprofile.thirdmthb}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>April</td>
+                                               <td><P>{{user.userprofile.fouthmthb}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>May</td>
+                                               <td><P>{{user.userprofile.fifthmthb}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>June</td>
+                                               <td><P>{{user.userprofile.sixthmthb}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>July</td>
+                                               <td> <P>0</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>August</td>
+                                               <td>0</td>
+                                             </tr>
+                                             <tr>
+                                               <td>September</td>
+                                               <td>0</td>
+                                             </tr>
+                                             <tr>
+                                               <td>October</td>
+                                               <td>0</td>
+                                             </tr>
+                                             <tr>
+                                               <td>November</td>
+                                               <td>0</td>
+                                             </tr>
+                                             <tr>
+                                               <td>December</td>
+                                               <td>0</td>
+                                             </tr>
+                                           </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                                                           </div>
                                                                                                  
                                                                                          
@@ -393,8 +467,9 @@
                                                        
                                             
                          
-                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#referalaccount">REFFERAL
-                                              </div>            </button> </h2>                            
+                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#referalaccount">REFFERAL ACCOUNT
+                                              </div>            </button> </h2> 
+
                             <div class="text-center">
           
       
@@ -402,7 +477,8 @@
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                                       <div class="modal-header">
-                                                          <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>
+                                                          <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>:
+                                                           <P>{{user.userprofile.fullname}}</P> 
                                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                               <span aria-hidden="true">&times;</span>
                                                           </button>
@@ -414,6 +490,8 @@
                                                        <section class="section grey-scale" >
                                                                                  <div class="container">
                                                                                        <h2 class="font-weight-bold">Mapato kwa mwezi</h2>
+                                                                                       <P>JUMLA: {{user.userprofile.totalb}}</P>
+                                                                                          <div class="text-center">
                                                                                           <div class="text-center">
                                                                                          
                                                                                                  
@@ -523,13 +601,13 @@
                                                                              
                                                                              <div class="section2 grey-scale">
                                                                              <div class="text-center">
-                                                                             <h2>From office</h2>
+                                                                             <h2>Kutoka ofisini</h2>
                                                                              </div>
                                                                              </div>
                                                                              
                                                                      <hr>
                                                                    
-                                                                                     
+                                                                          <P>{{user.userprofile.fullname}}: {{user.userprofile.Maelezo|linebreaks}}</P>      
                                                                                          
                                                                                          
           </div>
@@ -543,11 +621,65 @@
                                                               
                                                               <div class="section2 grey-scale">
                                                               <div class="text-center">
-                                                              <h2>Submit your Complaint</h2>
+                                                              <h2>Peleka malalamiko yako</h2>
                                                               </div>
                                                               </div>
                                                               
-                                                      <hr>
+                                                      
+                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#contact">Contact
+                                              </div>            </button> </h2> 
+
+                            <div class="text-center">
+          
+      
+                              <div class="modal fade bd-example-modal-lg" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                                      <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                                                           <P>{{user.userprofile.fullname}}</P> 
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                      </div>
+                                      
+                                              <div class="modal-body">
+                                                   
+                                                  
+                                                       <section class="section grey-scale" >
+                                                                                 <div class="container">
+                                                                                       <h2 class="font-weight-bold">Wasiliana na Ofisi</h2>
+                                                                                       
+                                                                                          <div class="text-center">
+                                                                                         
+                                                                                               <P> +255 653397942</P>
+                                                                                                <P>ogbcompany@gmail.com </P>
+                                                                                                         
+                                                                                                 <h3></h3>
+                                           
+                                                                                                      
+                                                                                          </div>
+                                                                                                 
+                                                                                         
+                                                                                 </div>
+                                                                 
+                                    
+                                                 <!--<P>{{user.userprofile.fouthgenr}}</P>-->
+                                                 <!--<P>{{user.userprofile.fifthgenr}}</P>-->
+                                                 <!---->
+                                                 
+
+                                                 </section>
+                                            
+                                                          
+                                                          
+                                                  </div>
+                    
+                                              </div>
+                                            </div>
+                                            </div>                                 
+                                      </div>
+
                       
                                                               
                                                               <hr>
