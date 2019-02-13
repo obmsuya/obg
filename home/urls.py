@@ -26,7 +26,7 @@ urlpatterns = [
     
     
     url(r'^register/$', views.register, name = "register"),
-    url(r'^image/$', views.image, name = "image"), 
+   
   
   
     url(r'^class/$', views.classes_home, name = "class"),

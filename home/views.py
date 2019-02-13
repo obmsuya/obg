@@ -83,16 +83,7 @@ def register(request):
         return render(request, 'home/create.html', args)
         
 
-def image(request):
-        form = Images(request.POST or None, request.FILES or None)
-        if form.is_valid():
-            create = form.save()
-            create.save
-            
-            return redirect('accounts:view_profile')
-            
-        args = {'form': form}
-        return render(request, 'home/image.html', args)
+
 
 @login_required         
 def payment(request):
@@ -101,6 +92,11 @@ def payment(request):
 @login_required 
 def hasira(request):
     return render (request, "home/hasira.html", {})
+
+
+
+
+
 
 #post_list      
 def classes_home(request):

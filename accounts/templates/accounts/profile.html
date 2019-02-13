@@ -17,7 +17,7 @@
 	
    
    
-   <main class="main-wrapper">
+<main class="main-wrapper">
 		
 		<aside class="left-sidebar">
 			<div class="search-area"><form action=""><input type="text" placeholder="Type to search.. "></form></div>
@@ -59,156 +59,505 @@
 
 
 
-	<div class="main-section">
-		<div class="container">
+<div class="main-section">
+
+		                  <div class="container">
 
 
-				<h1 class="topic-title">{{user.first_name}}</h1>
+                              				<h1 class="topic-title">{{user.first_name}}</h1>
+                              <hr><hr>
+                                              			<div id="linkintro">
+                                                <h2>Picha</h2>
+                                                <div class="line-sep"></div>
+                                               <section class="section grey-scale" >
+                			                             <div class="container">
+                                              
+                				                              <div class="text-center">
+                				
+                					                             <h2 class="font-weight-bold">How do i look?</h2>
+                						
+                					                               {%if user.userprofile.image2%}
+                                                          <img src="{{ user.userprofile.image2.url }}" class="img-responsive" width="400" height="500" alt="">
+                                                             
+                                                      {%endif%}
+                					
 
-			<div id="linkintro">
-                              <div class="text-center">
-                              <p class="font-weight-bold">My Picture</p>
-                              {%if user.userprofile.image2%}
-                                          <img src="{{ user.userprofile.image2.url }}" class="img-responsive" alt="">
-                                             <!--<img src="{%static 'img/vutia.jpg'%}" '>	-->
-                              {%endif%}
-			    <!--<img src="{%static 'img/stack.jpg'%}" class="img-responsive" alt="">-->
-                                <p>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#regprocess">contact us
-                              </div>						</button> </p>
-                              
-                         <p class="font-weight-bold">My First Name: </p>
-                         <P class="btn btn-link">{{user.first_name}}</P>
-                            <p></p>
-<!--                            <div class="text-center">-->
-<!--			    <img src="{%static 'img/vutia.jpg'%}" class="img-responsive" alt=""'>	-->
-<!--			    </div>-->
-			    <p class="font-weight-bold">My Phone number.</p>
-			    <P class="btn btn-link">{{user.userprofile.phone}}</P>
-			    
-			    <p class="font-weight-bold">My Email Address.</p>
-			    <P class="btn btn-link">{{user.email}}</p>
-                            
-			    
-					
-				
-                            
-				
-				 
-	        
-                <div class="modal fade bd-example-modal-lg" id="regprocess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle">Contact us</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                
-                                        <div class="modal-body">
+                                                      </div>
+                					
+                				
+                			                             </div>
+                        
+                                                </section>
+                        
+                                              
+                                            
+                                           
+                                              <h2>Taarifa Binafsi</h2>
+                                               <div class="text-center">
+                                              <div class="line-sep"></div>
+                                              <div class="row">
+                                                    <div class="col-md-6">
+                                                         
+                                                     <h3 >Jina Kamili  </h3>
+                               
+                					<div class="card right-in">
+                					    <div class="card-icon">
+                                                                <br><br>
+                						<ul class="tutor-icons">
+                                                                   
+                                                                    <br>
+                						    
+                                                                    <P>{{user.userprofile.fullname}}</P>
+                                                              <br>
+                						</ul>
+                                                                    
+                                                                
+                                                                  
+                                                                   
+                                                                  
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div><br>
+                                                   
+                                                    <div class="col-md-6">
+                					<h3>Simu yangu </h3>
+                					<div class="card right-in">
+                					    <div class="card-icon">
+                                                                <br>
+                						<ul class="tutor-icons">                                                    
+                                                              <P>{{user.userprofile.phone}}</P>
+                						</ul>                                                 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-6">
+                					<h3>E mail yangu </h3>
+                					<div class="card right-in">
+                					    <div class="card-icon">
+                                                                <br>
+                						<ul class="tutor-icons">                                                    
+                                                              <P>{{user.email}}</P>
+                						</ul>                                                 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                					<h3>Mkoa wangu </h3>
+                					<div class="card right-in">
+                					    <div class="card-icon">
+                                                                <br>
+                						<ul class="tutor-icons">                                                    
+                                                              <P>{{user.userprofile.region}}</P>
+                						</ul>                                                 
+                                                            </div>
+                                                        </div>
+                                                    </div>     
+                                              </div>
+                                              
+                                              
                                              
-                                            <p> +255653397942  </p>
-                                            <p>obgglobal@gmail.com</>
-                                                
-                                                    
-                                                    
                                             </div>
-              
-                            </div>
-                        </div>
-                    </div>                           
-                                
-						
-					
-	</div>
+                                        </div>
+ 	        
+ 				
+	             </div>
 
 			
-	
+          <div class="container"
+
+          <div id="link1data" class="animated fadeIn">
+
+                              
+                              				<div class="section2 grey-scale">
+                              					<div class="text-center">
+                              					
+                              					<h1  class="submenu">NETWORK YANGU.</h1> 
+                              					</div>
+                              			      </div>
+					
+				                          <hr>
+                			              <div class="text-center">      
+                                            <h2>Upliner Wangu ni:{{user.userprofile.upliner}}. Simu yake ni: 0{{user.userprofile.uplinerphone}}</h2>
+                                                      </div>
+                                 <hr>
+            <div class="row">
+                                  
+                                         <div class="col-md-5">
+                                           
+                                            
+                                              
+                                          
+                         
+                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#buysellnet">BUY AND SALE
+                                              </div>            </button> </h2>
+
+                            <div class="text-center">
+          
+      
+                              <div class="modal fade bd-example-modal-lg" id="buysellnet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                                      <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                      </div>
+                                      
+                                              <div class="modal-body">
+                                                   
+                                                  
+                                                       <section class="section grey-scale" >
+                                                                                 <div class="container">
+                                                                                       <h2 class="font-weight-bold">Timu yako</h2>
+                                                                                          <div class="text-center">
+                                                                                         
+                                                                                                 
+                                                                                                         
+                                                                      <P>{{user.userprofile.upliner}}</P>
+                                                                       <P>{{user.userprofile.firstgenb}}</P>
+                                                                     <P>{{user.userprofile.secondgenb}}</P>
+                                                                     <P>{{user.userprofile.thirdgenb}}</P>
+                                                                     <P>{{user.userprofile.fouthgenb}}</P>
+                                                                     <P>{{user.userprofile.fifthgenb}}</P>
+                                                                                          </div>
+                                                                                                 
+                                                                                         
+                                                                                 </div>
+                                                                 
+                                    
+                                                 <!--<P>{{user.userprofile.fouthgenr}}</P>-->
+                                                 <!--<P>{{user.userprofile.fifthgenr}}</P>-->
+                                                 <!---->
+                                                 
+
+                                                 </section>
+                                            
+                                                          
+                                                          
+                                                  </div>
+                    
+                                              </div>
+                                            </div>
+                                            </div>                                 
+                                      </div>
+                                              
+                                            
+                                 
+
+
+
+
+
+
+
+                                               <div class="col-md-5">
+                                                       
+                                            
+                			   
+                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#regprocess">REFFERAL
+                                              </div>						</button> </h2>                            
+                            <div class="text-center">
+					
+			
+                              <div class="modal fade bd-example-modal-lg" id="regprocess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                                      <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                      </div>
+                                      
+                                              <div class="modal-body">
+                                                   
+                                                  
+                                                       <section class="section grey-scale" >
+                                                                                 <div class="container">
+                                                                                       <h2 class="font-weight-bold">Timu yako</h2>
+                                                                                          <div class="text-center">
+                                                                                         
+                                                                                                 
+                                                                                                         
+                                                                                                 <p>Kizazi cha kwanza una watu: {{user.userprofile.firstgenr}}</p>
+                                                 
+                                                                                                <p>Kizazi cha pili una watu: {{user.userprofile.secondgenr}}</p>
+                                                                                              
+                                                                                              <P>Kizazi cha tatu una watu: {{user.userprofile.thirdgenr}}</P>
+                                                                                                      
+                                                                                          </div>
+                                                                                                 
+                                                                                         
+                                                                                 </div>
+                                                                 
+                                    
+                                                 <!--<P>{{user.userprofile.fouthgenr}}</P>-->
+                                                 <!--<P>{{user.userprofile.fifthgenr}}</P>-->
+                                                 <!---->
+                                                 
+
+                                                 </section>
+                                            
+                                                          
+                                                          
+                                                  </div>
+                    
+                                              </div>
+                                            </div>
+                                            </div>                                 
+                                      </div>
+
+                </div>
+       
+        </div>
+
+        
+        
+        <div class="container"
+         <div id="link2data" class="animated fadeIn">
+                                                              <div class="section2 grey-scale">
+                                                              <div class="text-center">
+                                                              <h2>ACCOUNT</h2>
+                                                              </div>
+                                                              </div> 
+                                                      <hr>
+
+
+
+
+                      <div class="row">
+                                  
+                                         <div class="col-md-5">
+                                            <h2>Buy and sell</h2>
+                                             <div class="line-sep"></div>
+  
+                         
+                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#buysellaccount">ACCOUNT
+                                              </div>            </button> </h2>                            
+                            <div class="text-center">
+          
+      
+                              <div class="modal fade bd-example-modal-lg" id="buysellaccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                                      <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLongTitle">ACCOUNT</h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                      </div>
+                                      
+                                              <div class="modal-body">
+                                                   
+                                                  
+                                                       <section class="section grey-scale" >
+                                                                                 <div class="container">
+                                                                                       <h2 class="font-weight-bold">Timu yako</h2>
+                                                                                          <div class="text-center">
+                                                                                         
+                                                                                                 
+                                                                                                         
+                                                    <P>{{user.userprofile.firstmthb}}</P>
+                                                   <P>{{user.userprofile.secondmthb}}</P>
+                                                   <P>{{user.userprofile.thirdmthb}}</P>
+                                                   <P>{{user.userprofile.fouthmthb}}</P>
+                                                   <P>{{user.userprofile.fifthmthb}}</P>
+                                                   <P>{{user.userprofile.sixthmthb}}</P>
+                                                                                          </div>
+                                                                                                 
+                                                                                         
+                                                                                 </div>
+                                                                 
+                                    
+                                                 <!--<P>{{user.userprofile.fouthgenr}}</P>-->
+                                                 <!--<P>{{user.userprofile.fifthgenr}}</P>-->
+                                                 <!---->
+                                                 
+
+                                                 </section>
+                                            
+                                                          
+                                                          
+                                                  </div>
+                    
+                                              </div>
+                                            </div>
+                                            </div>                                 
+                                      </div>
+                                              
+                                 
+                                               <div class="col-md-7">
+                                                       
+                                            
+                         
+                                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#referalaccount">REFFERAL
+                                              </div>            </button> </h2>                            
+                            <div class="text-center">
+          
+      
+                              <div class="modal fade bd-example-modal-lg" id="referalaccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                                      <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                      </div>
+                                      
+                                              <div class="modal-body">
+                                                   
+                                                  
+                                                       <section class="section grey-scale" >
+                                                                                 <div class="container">
+                                                                                       <h2 class="font-weight-bold">Mapato kwa mwezi</h2>
+                                                                                          <div class="text-center">
+                                                                                         
+                                                                                                 
+                                                                                                         
+                                                                                                 <h3></h3>
+                                           <table>
+                                             <tr>
+                                               <th>MWEZI</th>
+                                               <th>KIPATO</th>
+                                             </tr>
+                                             <tr>
+                                               <td>January</td>
+                                               <td><P>{{user.userprofile.firstmthr}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>February</td>
+                                               <td><P>{{user.userprofile.secondmthr}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>March</td>
+                                               <td><P>{{user.userprofile.thirdmthr}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>April</td>
+                                               <td><P>{{user.userprofile.fouthmthr}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>May</td>
+                                               <td><P>{{user.userprofile.fifthmthr}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>June</td>
+                                               <td><P>{{user.userprofile.sixthmthr}}</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>July</td>
+                                               <td> <P>0</P></td>
+                                             </tr>
+                                             <tr>
+                                               <td>August</td>
+                                               <td>0</td>
+                                             </tr>
+                                             <tr>
+                                               <td>September</td>
+                                               <td>0</td>
+                                             </tr>
+                                             <tr>
+                                               <td>October</td>
+                                               <td>0</td>
+                                             </tr>
+                                             <tr>
+                                               <td>November</td>
+                                               <td>0</td>
+                                             </tr>
+                                             <tr>
+                                               <td>December</td>
+                                               <td>0</td>
+                                             </tr>
+                                           </table>
+                                           
+                                                                                                      
+                                                                                          </div>
+                                                                                                 
+                                                                                         
+                                                                                 </div>
+                                                                 
+                                    
+                                                 <!--<P>{{user.userprofile.fouthgenr}}</P>-->
+                                                 <!--<P>{{user.userprofile.fifthgenr}}</P>-->
+                                                 <!---->
+                                                 
+
+                                                 </section>
+                                            
+                                                          
+                                                          
+                                                  </div>
+                    
+                                              </div>
+                                            </div>
+                                            </div>                                 
+                                      </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                                              
+                      
+</div>
+                                              
+                        
 
 			
-			<div id="link1data" class="animated fadeIn">
-
-
-				<h2>Network</h2>
-				<div class="section2 grey-scale">
-					<div class="text-center">
-					
-					<p  class="submenu">My network.</p> 
-					</div>
-					</div>
-					
-				<hr>
-				<div class="text-center">
-                                <h3>Network by Drawing</h3>
-                                {%if user.userprofile.image%}
-                                          <img src="{{ user.userprofile.image.url }}" width="240">
-                              {%endif%}
-                                <br><br>		
-				<h3>Network by Table</h3>
-				
-	       	
-			    </div>
-				
-				
-					
-				
-
-			</div>
+          <div class="container"
+                                     
+          <div id="link3data" class="animated fadeIn">
+                                                                             
+                                                                             <div class="section2 grey-scale">
+                                                                             <div class="text-center">
+                                                                             <h2>From office</h2>
+                                                                             </div>
+                                                                             </div>
+                                                                             
+                                                                     <hr>
+                                                                   
+                                                                                     
+                                                                                         
+                                                                                         
+          </div>
+                                                   
+                                                                 
 
 			
+          <div class="container"	
+          <div id="link4data" class="animated fadeIn">
+                                                              
+                                                              
+                                                              <div class="section2 grey-scale">
+                                                              <div class="text-center">
+                                                              <h2>Submit your Complaint</h2>
+                                                              </div>
+                                                              </div>
+                                                              
+                                                      <hr>
+                      
+                                                              
+                                                              <hr>
+            </div>
+                      
+                                              
+                                      
+                      
 
-			<div id="link2data" class="animated fadeIn">
-					<div class="section2 grey-scale">
-					<div class="text-center">
-					<h2>Account</h2>
-					</div>
-					</div>
-					
-				<hr>
-					
-
-					<hr>
-			</div>
-
-
-
-			<div id="link3data" class="animated fadeIn">
-					
-					<div class="section2 grey-scale">
-					<div class="text-center">
-					<h2>From office</h2>
-					</div>
-					</div>
-					
-				<hr>
-
-					
-			</div>
-			
-			
-			<div id="link4data" class="animated fadeIn">
-					
-					
-					<div class="section2 grey-scale">
-					<div class="text-center">
-					<h2>Submit your Complaint</h2>
-					</div>
-					</div>
-					
-				<hr>
-
-					
-					<hr>
-			</div>
-
-			
-			
-			
-			
-
-
-
-		</div>
+</div>
 	
 </main>  
      
