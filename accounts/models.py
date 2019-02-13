@@ -10,16 +10,16 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User)
     fullname = models.CharField (max_length=50, default='')
     upliner = models.CharField (max_length=50, default='')
-    uplinerphone = models.IntegerField(null=True, blank=True)
+ 
     Maelezo = models.TextField()
     Proffession = models.CharField (max_length=100, default='')
     country = models.CharField (max_length=100, default='')
     region = models.CharField (max_length=100, default='')
     city = models.CharField (max_length=100, default='')
-    phone = models.IntegerField(null=True, blank=True)
+  
     image = models.ImageField(upload_to='profile_image',null=True, blank=True)
     image2 = models.ImageField(upload_to='profile_image',null=True, blank=True)    
-    debt = models.IntegerField(null=True, blank=True)
+ 
     
     
     
