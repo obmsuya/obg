@@ -3,7 +3,7 @@ from .models import UserProfile
 
 # Register your models here.
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'country','phone','user_info')
+    list_display = ('user', 'country','user_info')
 
     def user_info(self,obj):
         return obj.Proffession
