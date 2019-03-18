@@ -7,7 +7,7 @@ from django.db.models.signals import post_save
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
+    # user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
     fullname = models.CharField (max_length=50, default='')
     upliner = models.CharField (max_length=50, default='')
     uplinerphone = models.IntegerField(default=0)
@@ -50,7 +50,7 @@ class UserProfile(models.Model):
     totalr = models.IntegerField(default=0)
     
     def __str__(self):
-        return self.user.username
+        return self.fullname
     
     
     
@@ -59,11 +59,11 @@ class UserProfile(models.Model):
     
     
 
-def create_profile(sender, **kwargs):
-    if kwargs['created']:
-            user_profile = UserProfile.objects.create(user=kwargs['instance'])
+# def create_profile(sender, **kwargs):
+#     if kwargs['created']:
+#             user_profile = UserProfile.objects.create(user=kwargs['instance'])
 
-post_save.connect(create_profile, sender=User)
+# post_save.connect(create_profile, sender=User)
 
 
 

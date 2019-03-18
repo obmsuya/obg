@@ -3,7 +3,7 @@ from .models import UserProfile
 
 # Register your models here.
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'country','phone','user_info')
+    list_display = ( 'country','phone','user_info')
 
     def user_info(self,obj):
         return obj.Proffession
@@ -11,7 +11,7 @@ class UserProfileAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         queryset= super(UserProfileAdmin,self).get_queryset(request)
-        queryset= queryset.order_by('phone','user')
+        queryset= queryset.order_by('phone')
         return queryset
 
     user_info.short_description = 'Info'
