@@ -30,7 +30,7 @@ class UserProfile(models.Model):
    
     
 
-    f
+    
 
     def __str__(self):
         return self.username
