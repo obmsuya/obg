@@ -8,7 +8,7 @@ from django.db.models.signals import post_save
 
 class UserProfile(models.Model):
     
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
     upliner = models.CharField (max_length=50, default='')
     downliner = models.IntegerField(default=0)
     Maelezo = models.CharField (max_length=100, default='')
