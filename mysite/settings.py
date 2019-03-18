@@ -85,28 +85,28 @@ DATABASES = {
 
 #live
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME':'obmsuya$obmsuya',
-#        'USER': 'obmsuya',
-#        'OPTIONS': {
-#            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#            #Tell mysql to connect with 'utf8mb4' character set
-#            'charset':'utf8mb4',
-#            },
-#        #Tell django to build the test database with 'utf8mb4'character set
-#        'TEST': {
-#            'CHARSET': 'utf8mb4',
-#            'COLLATION': 'utf8mb4_unicode_ci',
-#        },
-#        'PASSWORD': 'Pa55w0rd',
-#        'HOST': 'obmsuya.mysql.pythonanywhere-services.com',
-#        'PORT': '',
-#       
-#    }
-#}
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME':'obmsuya$default',
+#         'USER': 'obmsuya',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#             #Tell mysql to connect with 'utf8mb4' character set
+#             'charset':'utf8mb4',
+#             },
+#         #Tell django to build the test database with 'utf8mb4'character set
+#         'TEST': {
+#             'CHARSET': 'utf8mb4',
+#             'COLLATION': 'utf8mb4_unicode_ci',
+#         },
+#         'PASSWORD': 'Pa55w0rd',
+#         'HOST': 'obmsuya.mysql.pythonanywhere-services.com',
+#         'PORT': '',
+       
+#     }
+# }
 
 
 # Password validation
@@ -180,3 +180,12 @@ LOGIN_EXEMPT_URLS = (
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
 
+CORS_REPLACE_HTTPS_REFERER = True
+HOT_SCHEME = "https://"
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE=True
+CRSF_COOKIE_SECURE = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 1000000
+SECURE_FRAME_DENY = True
