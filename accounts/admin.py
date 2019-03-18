@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile
+
 
 # Register your models here.
 # class UserProfileAdmin(admin.ModelAdmin):
@@ -16,6 +16,6 @@ from .models import UserProfile
 
 #     user_info.short_description = 'Info'
 
-admin.site.register(UserProfile)
+
 
 
